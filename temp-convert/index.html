@@ -6,24 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Temp Converter</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Orbitron"
+    />
   </head>
   <body>
     <div class="container">
-      <h2>Temperature Converter</h2>
-      <div>
+      <h1>Temperature Converter</h1>
+      <div class="form">
         <label for="tempIn">Enter the temperature you want to convert</label>
         <input type="number" id="tempIn" name="tempIn" />
-        <input type="radio" checked id="degf" name="units" value="degf" />
-        <label for="degf">Fahrenheit</label>
-        <input type="radio" id="degc" name="units" value="degc" />
-        <label for="degf">Celsius</label>
-        <input type="button" onclick="tempConvert()" value="Convert!" />
-        <input type="button" onclick="clearForm()" value="Clear" />
-      </div>
-      <div id="output">
-        <h1 id="h1out"></h1>
+        <div>
+          <input type="radio" checked id="degf" name="units" value="degf" />
+          <label for="degf"> &deg F</label><br />
+          <input type="radio" id="degc" name="units" value="degc" />
+          <label for="degf">&deg C</label>
+        </div>
+        <div>
+          <br />
+          <!-- Better to use "button" element instead if "input"? -->
+          <input type="button" onclick="tempConvert()" value="Convert!" />
+          <input type="button" onclick="clearForm()" value="Clear" />
+        </div>
+
+        <div id="output">
+          <h2 id="h1out"></h2>
+        </div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
